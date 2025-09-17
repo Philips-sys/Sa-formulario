@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Formulário</h1>
+    <!-- Cabeçalho principal da página, com o texto "Formulário de Contato". -->
+
+    <form action="do_login.html" method="POST">
+      <!-- Início do formulário, que enviará os dados para a página "submit_form.html" usando o método POST. -->
+
+<!--fieldset: Agrupa campos relacionados em uma seção, criando uma caixa ao redor, criando uma separação clara dentro do formulário.. <legend> é usado dentro de um <fieldset> para fornecer uma legenda ou título para o grupo de campos. -->
+    <fieldset>
+      <legend> Informações Pessoais:</legend>
+      
+      <!-- Campo para o nome -->
+      <label for="nome">Nome completo:</label><br />
+      <!-- Rótulo (label) para o campo de nome, descrevendo o que deve ser preenchido. for="idade" conecta o <label> ao campo de formulário com o id="idade". -->
+      <input type="text" id="nome" name="nome" required /><br /><br />
+      <!-- Campo de entrada de texto onde o usuário digita o nome. "name='nome'" é o nome do campo que será enviado. O atributo required em um campo de entrada (<input>) serve para indicar que o preenchimento desse campo é obrigatório antes que o formulário possa ser enviado. Se um campo marcado como required não for preenchido, o navegador exibirá uma mensagem de erro e impedirá o envio do formulário. -->
+
+      <!-- Campo de número com setas de incremento e decremento -->
+      <label for="quantidade">Data:</label><br>
+      <input type="date" id="quantidade" name="quantidade" min="1" max="10"><br /><br />
+      <!--<input type="number">: é o campo de entrada exclusivo de número. Esse campo exibe automaticamente as setas para aumentar ou diminuir o valor. min="1" e max="10": Esses atributos definem o valor mínimo e máximo que o usuário pode selecionar usando as setas. O usuário pode ainda digitar qualquer valor dentro desse intervalo.-->
+
+      <!-- Campo para o e-mail -->
+      <label for="email">E-mail:</label><br />
+      <!-- Rótulo para o campo de e-mail-->
+      <input type="email" id="email" name="email" required /><br/><br />
+
+      <p>Insira sua senha:</p>
+      <input type="password" />
+
+      <!-- Campo de entrada de texto para o e-mail. "type='email'" valida o formato de e-mail. "name='email'" será o nome do campo que será enviado. -->
+      </fieldset>
+    
+    <fieldset>
+      <legend> Perguntas de múltipla escolha:</legend>
+      
+      <p>Qual é a sua disciplina favorita?</p>
+
+      <!-- Opções de resposta, cada uma com um botão de rádio. Quando o formulário é enviado, caso a opção selecionada seja a azul, será enviado como value="Azul".-->
+      <input type="radio" id="opcao1" name="cor_favorita" value="Azul" />
+      <label for="opcao1">Biologia</label><br />
+
+      <input type="radio" id="opcao2" name="cor_favorita" value="Vermelho" />
+      <label for="opcao2">Matemática</label><br />
+
+      <input type="radio" id="opcao3" name="cor_favorita" value="Verde" />
+      <label for="opcao3">Química</label><br />
+      <!-- Botão de envio -->
+      <input type="submit" value="Enviar" />
+      <!-- Botão que, ao ser clicado, envia os dados do formulário para a página "submit_form.html". -->
+    </fieldset>
+    </form>
+  </body>
+</html>
